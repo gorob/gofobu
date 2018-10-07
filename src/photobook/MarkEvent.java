@@ -1,4 +1,4 @@
-package sample;
+package photobook;
 
 import javafx.beans.NamedArg;
 import javafx.event.Event;

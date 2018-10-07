@@ -1,4 +1,4 @@
-package sample;
+package photobook;
 
 import javafx.event.Event;
 import javafx.scene.Cursor;
