@@ -21,7 +21,7 @@ public class PhotobookApp extends Application {
         PhotobookPicture image2 = new PhotobookPicture("testpic.jpeg");
         rootNode.getChildren().add(image2);
 
-        primaryStage.setTitle("Photobook");
+        primaryStage.setTitle("GoFobu");
         primaryStage.setX(0);
         primaryStage.setY(0);
         primaryStage.setWidth(1365);
