@@ -58,12 +58,12 @@ public class RotationFeature implements IRotationFeature {
     }
 
     public void startRotation(double mouseX, double mouseY, double screenY) {
-        setRotationActive(isMousePointerinRotationArea(mouseX, mouseY));
+        setRotationActive(isMousePointerInRotationArea(mouseX, mouseY));
         setRotationToTheRight(isMousePointerInRotationAreaRight(mouseX, mouseY));
         setLastScreenY(screenY);
     }
 
-    public boolean isMousePointerinRotationArea(double mouseX, double mouseY) {
+    public boolean isMousePointerInRotationArea(double mouseX, double mouseY) {
         return isMousePointerInRotationAreaLeft(mouseX, mouseY) || isMousePointerInRotationAreaRight(mouseX, mouseY);
     }
 
@@ -142,7 +142,7 @@ public class RotationFeature implements IRotationFeature {
             return;
         }
 
-        if (isMousePointerinRotationArea(mouseX, mouseY)) {
+        if (isMousePointerInRotationArea(mouseX, mouseY)) {
             getRegion().getScene().setCursor(Cursor.CLOSED_HAND);
         }
     }
