@@ -7,5 +7,5 @@ public interface IRotationFeature {
     void startRotation(double mouseX, double mouseY, double screenY);
     boolean rotate(double newScreenY);
     boolean isMousePointerInRotationArea(double mouseX, double mouseY);
-    void changeMouseCursor(boolean mousePressed, double mouseX, double mouseY);
+    void changeMouseCursor(double mouseX, double mouseY);
 }

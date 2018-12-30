@@ -181,7 +181,7 @@ public class ResizeFeature implements IResizeFeature {
         return (x>=left && x<=right && y>=top && y<=bottom);
     }
 
-    public void changeMouseCursor(boolean mousePressed, double mouseX, double mouseY) {
+    public void changeMouseCursor(double mouseX, double mouseY) {
         if (isMousePointerInResizeAreaTopRight(mouseX, mouseY)) {
             getResizablePhotobookComponent().setCursor(Cursor.NE_RESIZE);
         } else if (isMousePointerInResizeAreaBottomRight(mouseX, mouseY)) {
@@ -198,6 +198,8 @@ public class ResizeFeature implements IResizeFeature {
             getResizablePhotobookComponent().setCursor(Cursor.W_RESIZE);
         } else if (isMousePointerInResizeAreaTop(mouseX, mouseY)) {
             getResizablePhotobookComponent().setCursor(Cursor.N_RESIZE);
+        } else {
+            getResizablePhotobookComponent().setCursor(Cursor.DEFAULT);
         }
     }
 }

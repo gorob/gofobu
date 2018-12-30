@@ -137,11 +137,7 @@ public class RotationFeature implements IRotationFeature {
         return true;
     }
 
-    public void changeMouseCursor(boolean mousePressed, double mouseX, double mouseY) {
-        if (mousePressed) {
-            return;
-        }
-
+    public void changeMouseCursor(double mouseX, double mouseY) {
         if (isMousePointerInRotationArea(mouseX, mouseY)) {
             getRegion().getScene().setCursor(Cursor.CLOSED_HAND);
         }

@@ -98,14 +98,17 @@ public class PhotobookPicture extends StackPane implements IPhotobookPicture {
     }
 
     private void changeMouseCursor(boolean mousePressed, double mouseX, double mouseY) {
-        if (mousePressed) {
-            return;
-        }
+        // if (mousePressed) {
+        //     return;
+        // }
 
         getScene().setCursor(Cursor.DEFAULT);
 
-        getRotationFeature().changeMouseCursor(mousePressed, mouseX, mouseY);
-        getResizeFeature().changeMouseCursor(mousePressed, mouseX, mouseY);
+        getLabel().setText("X="+mouseX+"; Y="+mouseY);
+
+
+        getRotationFeature().changeMouseCursor(mouseX, mouseY);
+        getResizeFeature().changeMouseCursor(mouseX, mouseY);
     }
 
     private void doOnMousePressed(double mouseX, double mouseY, double screenX, double screenY, double sceneX, double sceneY) {
